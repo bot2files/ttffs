@@ -7,8 +7,8 @@ import random
 import os
 from time import sleep
 from telebot import types
-owner = [1972]
-private = [2029773594,-674191525]
+owner = [1972138234]
+private = [-100674191525]
 
 bot = telebot.TeleBot("5073845264:AAEsrDC1SrAJgUSn5D_w5WJ3YsbBG4jrhrg")
 
