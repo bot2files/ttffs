@@ -691,7 +691,7 @@ CONTACT : @D_4_X''')
 					except:
 						pass
 
-		if message.chat.id not in groub:
+		else:
 			bot.reply_to(message,f'''Ahh.. shit here we go again
 
 Error: Unauthorised Access
