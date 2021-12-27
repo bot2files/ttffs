@@ -315,7 +315,7 @@ def msg(message):
 Error: Unauthorised Access
 CONTACT : @D_4_X''')
 	if message.chat.type == "group" or message.chat.type == "supergroup":
-		if message.chat.id in groub:
+		if int(message.chat.id) in groub:
 			if message.from_user.id in owner:
 				c = message.text
 				if '/key ' in c:
