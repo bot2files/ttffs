@@ -8,7 +8,8 @@ import os
 from time import sleep
 from telebot import types
 owner = [1972]
-private = [100674191525]
+private = [674191525]
+groub = -100674191525
 
 bot = telebot.TeleBot("5073845264:AAEsrDC1SrAJgUSn5D_w5WJ3YsbBG4jrhrg")
 
@@ -313,8 +314,8 @@ def msg(message):
 
 Error: Unauthorised Access
 CONTACT : @D_4_X''')
-	else:
-		if message.chat.id in private:
+	if message.chat.type == "group" or message.chat.type == "supergroup":
+		if message.chat.id in groub:
 			if message.from_user.id in owner:
 				c = message.text
 				if '/key ' in c:
@@ -682,7 +683,7 @@ CONTACT : @D_4_X''')
 					except:
 						pass
 
-		else:
+		if message.chat.id not in groub:
 			bot.reply_to(message,f'''Ahh.. shit here we go again
 
 Error: Unauthorised Access
