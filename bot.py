@@ -9,7 +9,7 @@ from time import sleep
 from telebot import types
 owner = [1972]
 private = [674191525]
-groub = -100674191525
+groub = [-100674191525]
 
 bot = telebot.TeleBot("5073845264:AAEsrDC1SrAJgUSn5D_w5WJ3YsbBG4jrhrg")
 
@@ -32,6 +32,13 @@ bot with @D_4_X""",)
 
 Error: Unauthorised Access
 CONTACT : @D_4_X''')
+
+
+@ bot . message_handler ( commands = ['idgroub']) 
+def  id_groub ( message ):
+	 id = message.chat.id
+	 bot.reply_to(message,id)
+
 
 @ bot . message_handler ( commands = ['help']) 
 def  send_welcome ( message ):
@@ -315,7 +322,7 @@ def msg(message):
 Error: Unauthorised Access
 CONTACT : @D_4_X''')
 	if message.chat.type == "group" or message.chat.type == "supergroup":
-		if int(message.chat.id) in groub:
+		if message.chat.id in groub:
 			if message.from_user.id in owner:
 				c = message.text
 				if '/key ' in c:
