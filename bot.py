@@ -36,9 +36,11 @@ CONTACT : @D_4_X''')
 
 @ bot . message_handler ( commands = ['idgroub']) 
 def  id_groub ( message ):
-	 id = message.chat.id
-	 bot.reply_to(message,id)
-
+	 try:
+	 	id = message.chat.id
+	 	bot.reply_to(message,id)
+	 except:
+	 	pass
 
 @ bot . message_handler ( commands = ['help']) 
 def  send_welcome ( message ):
